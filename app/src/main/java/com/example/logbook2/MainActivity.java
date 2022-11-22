@@ -1,7 +1,5 @@
 package com.example.logbook2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -10,6 +8,8 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.logbook2.databinding.ActivityMainBinding;
 
@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        imageView = (ImageView) findViewById(R.id.imageView);
-        backward_button = (Button) findViewById(R.id.backward_button);
-        forward_button = (Button) findViewById(R.id.forward_button);
+        imageView = findViewById(R.id.imageView);
+        backward_button = findViewById(R.id.backward_button);
+        forward_button = findViewById(R.id.forward_button);
 
         if (i == 0)
             backward_button.setVisibility(View.VISIBLE);
